@@ -27,7 +27,8 @@ app.get("/", (req, res) => {
   res.send({ message: "server under construction" });
 });
 
+connectDB();
+
 app.listen(PORT, () => {
-  connectDB();
   console.log(`server started http://localhost:${PORT}`);
 });
